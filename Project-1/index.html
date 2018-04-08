@@ -3,33 +3,37 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
+  <head>
+    <!-- Not specifying the title gives a cryptic error message:
+     "end tag for "head" which is not finished " */-->
+    <title> Project-1  </title>
+    <link rel="stylesheet" type="text/css" href="styleC.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <p> A </p>
+      </div>
 
-<link rel="stylesheet" type="text/css" href="styleA.css" />
+      <div class="box2">
+        <p> B </p>
+      </div>
 
-<div class="container">
+      <div class="box1">
+        <p> C </p>
+      </div>
 
-    <div class="box1"> 
-     <p> A </p>
-    </div>
-    
-    <div class="box2"> 
-     <p> B </p>
-    </div>
-    
-    <div class="box1"> 
-     <p> C </p>
-    </div>
-    
-    <div class="box2"> 
-     <p> D </p>
-    </div>
-    
-    <div class="box1"> 
-     <p> E </p>
-    </div>
-    
-    <div class="box3"> 
-     <p> F </p>
-    </div>
+      <div class="box2">
+        <p> D </p>
+      </div>
 
-</span>
+      <div class="box1">
+        <p> E </p>
+      </div>
+
+      <div class="box3">
+        <p> F </p>
+      </div>
+    </div>
+  </body>
+</html>
