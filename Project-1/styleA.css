@@ -1,49 +1,44 @@
-.box1 {
+/* Common Style Settings for all the div childres div with class="container" */
+.container > div {
     margin: auto;
-    border-top: 1px solid #687291;
     height: 100px;
     width: 100px;
     text-align: center;
     font-family:Tahoma ;
     font-size: 40px;
 
+}
+
+/* Alternate background color and border top setting for first five boxes */
+.box1 {
+    border-top: 1px solid #687291;
     background-color: #dfe1e7;
-    text-align: center;
-    font-family:Tahoma ;
-    font-size: 40px;
+
 }
 
 .box2 {
-    margin: auto;
     border-top: 1px solid #687291;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    font-family:Tahoma ;
-    font-size: 40px;
-
     background-color: #eeeff2;
 
 
 }
 
 .box3 {
-    margin: auto;
-    border-top: 1px solid #687291;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    font-family:Tahoma ;
-    font-size: 40px;
-
-    background-color: #687291;
     border: 4px solid black;
+    background-color: #687291;
 }
 
+/* Container div
+ * display=flex, flex-direction=column,  and height=100% view port width
+ * is done for arranging the blocks in the dynamically equally spaced manner
+ * based on screen size
+ */
 .container {
+    /*
     text-align: center;
-    height: 100vh;
+    justify-content: space-between;
+    */
     display:flex;
     flex-direction:column;
-    justify-content: space-between;
+    height: 100vh;
 }

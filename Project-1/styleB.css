@@ -1,0 +1,31 @@
+/* Hover setting for all the divs in the container */
+.container > div:hover {
+   background-color: yellow;
+   color: goldenrod;
+   cursor:pointer;
+}
+
+/* Common style swettings for all the divs inside the comtainer */
+.container > div {
+    margin: 5px; /* 5px on either side will add to the distance of 10 as required in the spec*/
+    border-left: 10px dotted #687291;
+    padding-left:10px;
+    height 150px;
+    width: 100px;
+    background-color: #eeeff2;
+    font-family:Tahoma ;
+    font-size: 40px;
+    display: inline-block;
+}
+
+/* Additional setting only for the box F to fix in the i  bottom right corner */
+.box3 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+/* Container setting to prevent wrapping of the inline boxes when window is resized */
+.container {
+    white-space: nowrap;
+}
