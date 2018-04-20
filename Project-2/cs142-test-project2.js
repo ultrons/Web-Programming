@@ -11,6 +11,13 @@
 var cs142MakeMultiFilter;
 var Cs142TemplateProcessor;
 
+/*
+ * Using anonymous function pattern to avoid declaring variable in global scope 
+ * 
+ * Additional functions inside the anonymous fucntion have be created to only to 
+ * organize the code better. It was not required to address the assignment requirement.
+ *
+ **/
 var testModule = (function() {
   // Result message for Problems 1-3
   var p1Message = 'SUCCESS';

@@ -23,6 +23,15 @@
 function Cs142TemplateProcessor (template) {
   this.template = template;
 }
+/* function :  fillIn
+   * arguments:  dictionary  containing key-value pairs where
+   *                  key points to the string to be replace i.e. {{<key>}} is the target string
+   *                  value is the string that will replace the target string
+   *
+   * Synopsys: Function's purpose is self-explanatory.
+   *           It has been defined using proto-type to keep it dynamic.
+   *           without copying it with every instance.
+   */
 
 Cs142TemplateProcessor.prototype.fillIn = function (replaceDict) {
   //Is this the most efficient way to loop over a dictionary?

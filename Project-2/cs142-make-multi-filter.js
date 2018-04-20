@@ -29,6 +29,7 @@ function cs142MakeMultiFilter (originalArray) {
   var currentArray = [];
   // Creating copy of the orignal array,
   // better  ways during jquery.extends are possiblem but not sure I could use them
+  // Plain assignment copies by reference
   for (i=0; i<originalArray.length; i++) {
     currentArray.push(originalArray[i]);
   }
