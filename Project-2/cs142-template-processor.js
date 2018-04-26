@@ -25,7 +25,8 @@ function Cs142TemplateProcessor (template) {
 }
 /* function :  fillIn
    * arguments:  dictionary  containing key-value pairs where
-   *                  key points to the string to be replace i.e. {{<key>}} is the target string
+   *                  key points to the string to be replace i.e. all patterns matching {{<key>}} 
+   *                  is the target string
    *                  value is the string that will replace the target string
    *
    * Synopsys: Function's purpose is self-explanatory.
@@ -34,13 +35,15 @@ function Cs142TemplateProcessor (template) {
    */
 
 Cs142TemplateProcessor.prototype.fillIn = function (replaceDict) {
-  //Is this the most efficient way to loop over a dictionary?
-  var keys = Object.keys(replaceDict);
-  var i;
-  for (i=0; i<keys.length; i++) {
-    var targetRegExp = new RegExp("{{"+keys[i]+"}}", "g");
-    this.template=this.template.replace(targetRegExp, replaceDict[keys[i]]);
+  /* Applying a function in the replacement string 
+     seemed to be the cleanest solution for this problem.
+     Eventually following link explained how to accomplished that:
+     Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Specifying_a_function_as_a_parameter
+  */
+  function replacer (match, p1, string) {
+    return (replaceDict[p1] !== undefined) ? replaceDict[p1] : "";
   }
+  this.template=this.template.replace(/{{(\w+)}}/g,replacer);
   return this.template;
 };
 

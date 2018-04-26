@@ -130,10 +130,10 @@ var testModule = (function() {
         p2Message = 'FAILURE';
     } else {
 
-        var template = 'My favorite month is {{month}} but not the day {{day}} or the year {{year}}';
+        var template = 'My favorite month is {{"month"}} but not the day {{day}} or the year {{year}}';
         var dateTemplate = new Cs142TemplateProcessor(template);
 
-        var dictionary = {month: 'July', day: '1', year: '2016'};
+        var dictionary = {"month": 'July', day: '1', year: '2016'};
         var str = dateTemplate.fillIn(dictionary);
 
         if (str !== 'My favorite month is July but not the day 1 or the year 2016') {
