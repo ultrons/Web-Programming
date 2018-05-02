@@ -1,0 +1,98 @@
+[isDatePane=True] {
+
+  border:blue solid 1px;
+  background:white;
+  height:210px;
+  width:310px;
+  position:relative;
+
+}
+
+[isLeftMargin=True] {
+
+  margin:auto;
+  background:Grey;
+  width:100px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  font-family:Tahoma ;
+  font-size:19px;
+  color: white;
+
+}
+
+
+
+
+[isMonthDisplay=True] {
+
+  background:white;
+  height:30px;
+  width:150px;
+  text-align:center;
+  font-family:Tahoma ;
+  font-size:15px;
+  position:absolute;
+  left:130px;
+  top:0px;
+
+}
+
+[isPrevButton=True] {
+
+  height:0;
+  width:0;
+  border-right:30px solid black;
+  border-top:15px solid transparent;
+  border-bottom:15px solid transparent;
+  position:absolute;
+  left:100px;
+  top:0px
+}
+
+
+[isNextButton=True] {
+
+  height:0;
+  width:0;
+  border-left:30px solid black;
+  border-top:15px solid transparent;
+  border-bottom:15px solid transparent;
+  position:absolute;
+  left:280px;
+  top:0px
+
+
+
+}
+
+[isDay=True],[isDate=True] {
+  margin:auto;
+  background:white;
+  height:30px;
+  width:30px;
+  border-radius:50%;
+  position:absolute;
+  font-family:Tahoma ;
+  font-size:15px;
+  text-align:center;
+}
+
+[greyOut=True] {
+  margin:auto;
+  background:grey;
+  height:30px;
+  width:30px;
+  border-radius:50%;
+  position:absolute;
+  font-family:Tahoma ;
+  font-color:white ;
+  font-size:15px;
+  text-align:center;
+}
+
+
+[isDate=True]:hover {
+  background:lightgrey;
+}
