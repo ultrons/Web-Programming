@@ -13,6 +13,12 @@ cs142App.controller('StatesController', ['$scope', function($scope) {
   }
 
   $scope.search.filterStates = function() {
+    if ($scope.search.str === undefined || $scope.search.str === "" ) {
+       $scope.search.mess = "No substring Entered ... Showing full list of states:";
+    }
+    else {
+       $scope.search.mess =" List of states matching: " + "\"" + $scope.search.str +  "\"";
+    }
     var flist = [];
     var re = new RegExp($scope.search.str, "i");
     for (var i in allStates) {

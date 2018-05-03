@@ -25,11 +25,9 @@ you use won't conflict with these names.
     display: inline-block;
 }
 
-.name-style {
-  font-family: "Tahoma";
+.cs142-example-mottoInput {
+  height: 20px;
+  border:1px;
   color: blue;
 }
 
-.motto-style {
-  color: goldenrod;
-}
