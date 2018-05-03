@@ -22,13 +22,15 @@ controller named MainController.-->
         <script src="components/states/statesController.js"></script>
         <link rel="stylesheet" type="text/css" href="components/states/states.css" />
         <script src="modelData/states.js"></script>
-        <script src="components/common/commonController.js"></script>
-        <link rel="stylesheet" type="text/css" href="components/common/common.css" />
+        <script src="components/header/headerController.js"></script>
+        <link rel="stylesheet" type="text/css" href="components/header/header.css" />
     </head>
     <body>
-        <div ng-include="'components/common/commonTemplate.html'" ng-controller="CommonController"></div>
-        <a href="#!example">Example</a>
-        <a href="#!states">States</a>
+        <div ng-include="'components/header/headerTemplate.html'" ng-controller="HeaderController" ng-init="init('Problem-5')"></div>
+        <ul class="cs142-main-toolbar">
+          <li class="cs142-main-toolbar-item"><a  href="#!example">Example</a></li>
+          <li class="cs142-main-toolbar-item"><a  href="#!states">States</a></li>
+        </ul>
         <!--ng-if creates and destroy elements in the DOM: @377 piazza -->
         <div ng-view> </div>
     </body>
