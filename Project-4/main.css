@@ -4,3 +4,53 @@ CSS for the CS142 project #4 main page
 Since CSS uses a global name space for classes we should use class names starting with
 cs142-main- here.
 */
+.cs142-main-header {
+ height:100px;
+ background:#900000;
+ content:"./Dobby.gif";
+ color:White;
+ box-shadow:5px 5px gold ;
+ margin-top:1px;
+}
+
+
+.cs142-main-name-style {
+  margin: 0px;
+  padding: 5px;
+  font-family: "Tahoma";
+  text-shadow: 2px 2px 5px yellow;
+}
+
+.cs142-main-motto-style {
+  padding-left: 10px;
+  color: goldenrod;
+  font-size:20px;
+}
+
+
+.cs142-main-toolbar {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  margin-left: 3px;
+  overflow: hidden;
+  background-color: #950000;
+  font-family:Tahoma;
+}
+
+
+.cs142-main-toolbar-item {
+    float: left;
+}
+
+.cs142-main-toolbar-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.cs142-main-toolbar-item a:hover {
+    background-color: #850000;
+}
