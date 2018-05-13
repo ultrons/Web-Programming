@@ -1,0 +1,1 @@
+Defines an Angular module named cs142App and >>>>stores it in browser's global window property so it can be accessed by the components.<<

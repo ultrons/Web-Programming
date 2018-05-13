@@ -1,0 +1,29 @@
+<div class="container" flex layout="column" layout-align="center center" id="cs142-photoApp-ImageSection">
+
+    <img class="cs142-photoApp-currentPicture" ng-src="./images/{{user.currentPic}}">
+    <div class="container" flex layout="row">
+      <md-button ng-click="showPrevImage()" class="prevButton"> prev </md-button>
+      <md-button ng-click="showNextImage()" class="nextButton"> next </md-button>
+    </div>
+    <div class="container" flex layout="row">
+    <ul>
+      <span ng-repeat="img in userImages">
+        <img  class="cs142-photApp-imgListItem" ng-click="setCurrent(img._id)"   ng-src="./images/{{img.file_name}}">
+      </span>
+    </ul>
+    </div>
+</div>
+    <div  class="container" flex layout="column" layout-align="start stretch">
+      <p> Comments: </p>
+      <md-card ng-repeat="com in getCurrentComments()" layout="row" layout-align="start center">
+        <md-card-media layout=column>
+           <img class="cs142-photoApp-thumbnail" ng-src="./images/{{profilePic(com).image}}">
+          <a  ng-href="#!users/{{profilePic(com).id}}"  >{{profilePic(com).name}} </a>
+        </md-card-media>
+        <md-card-content>
+          <p>({{com.date_time}}):</p>
+          <p>{{com.comment}}<p>
+        </md-card-content>
+      </md-card>
+    </div>
+
