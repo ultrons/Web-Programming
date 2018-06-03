@@ -1,0 +1,32 @@
+.cs142-user-photos-nextButton {
+  color: blue;
+}
+.cs142-user-photos-prevButton {
+  color: blue;
+}
+.cs142-user-photos-imgListItem {
+   border-radius: 25%;
+   padding: 2px;
+   max-width: 25%;
+
+}
+
+.cs142-user-photos-currentPicture {
+  display: inline;
+  height: 100%;
+  overflow:hidden;
+  border: blue 2px;
+  padding:5px;
+}
+
+
+#cs142-user-photos-ImageSection {
+   padding: 10px;
+
+}
+.cs142-user-photos-thumbnail {
+   border-radius:30px;
+   height:30px;
+   width:30px;
+}
+
