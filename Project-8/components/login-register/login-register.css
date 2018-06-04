@@ -1,0 +1,35 @@
+.cs142-registration-container {
+    margin-top: 20px
+}
+
+.cs142-registration-container > * {
+  width: 100%;
+}
+
+.md-card-title {
+      background-color: blue;
+      color:white;
+  padding-top: 5px;
+  text-align: center;
+    }
+
+.cs142-login-reg-warningHeader {
+  font-size: 15px;
+  color: red;
+}
+.cs142-login-reg-warrning-mess {
+  font-size: 10px;
+  color: blue;
+}
+
+.cs142App-photo-upload-button {
+  background: white;
+  color: blue;
+
+}
+
+.cs142App-logout-button {
+  background: red;
+  color: white;
+
+}

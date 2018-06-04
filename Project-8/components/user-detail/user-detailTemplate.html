@@ -1,0 +1,23 @@
+<md-card  flex layout="row" layout-align="start start" id="cs142-user-detail-profileBlock">
+  <div flex layout="column" layout-align="start start">
+    <md-card-title>
+      <md-card-title-text>
+      <span class = "md-headline">{{user.first_name+ ' ' + user.last_name}} </span>
+      <span class="md-subhead"> native of '{{user.location}}'</span>
+      <div class = "md-subhead">Occupation: {{user.occupation}} </div>
+      </md-card-title-text>
+    </md-card-title>
+
+    <md-card-content flex layout="column" layout-align="start start">
+      <p> What's on my mind? ... "{{user.description}}" </p>
+    </md-card-content>
+
+  </div>
+  <md-card-media>
+    <button ng-click="resetAn()"> Act </button>
+  <img class="annotatable" ng-src="./images/{{user.profilePic}}" />
+  </md-card-media>
+</md-card>
+<div class="cs142-linkToAllPics">
+    <a  ng-href="#!photos/{{user._id}}"  >My eyes can't have enough of "{{user.first_name+ ' ' + user.last_name}}" </a>
+</div>

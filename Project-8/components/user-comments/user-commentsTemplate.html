@@ -1,0 +1,28 @@
+        <!-- View for regular specs
+
+        -->
+            <div class="container" flex layout="column" layout-align="center center" id="cs142-user-photos-ImageSection">
+                <div class="container" flex layout="column">
+                <ul>
+                  <span ng-repeat="img in userImages">
+                    <a  ng-href="#!users/{{img.user_id}}"  >
+                    <img  class="cs142-user-photos-imgListItem"  ng-src="./images/{{img.file_name}}">
+                     </a>
+                        <div  class="container" flex layout="column" layout-align="start stretch">
+                        <p> Comments: </p>
+                        <md-card ng-repeat="(id, com) in img.comments" layout="row" layout-align="start center">
+                          <md-card-media layout=column>
+
+                              <img class="cs142-user-photos-thumbnail"  ng-src="./images/{{profilePic}}"></img>
+                            <a  ng-href="#!users/{{com.user._id}}"  >{{user_name}}</a>
+                          </md-card-media>
+                          <md-card-content>
+                            <p>({{com.date_time}}):</p>
+                            <p>{{com.comment}}<p>
+                          </md-card-content>
+                        </md-card>
+                        </div>
+                  </span>
+                </ul>
+                </div>
+            </div>

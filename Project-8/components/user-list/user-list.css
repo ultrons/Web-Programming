@@ -1,0 +1,14 @@
+.cs142App-userList-List {
+  padding: 6px;
+
+}
+
+.cs142App-userList-photo_count {
+  background-color: green;
+  border-radius: 16px;
+}
+
+.cs142App-userList-comment_count {
+  background-color: red;
+  border-radius: 16px;
+}

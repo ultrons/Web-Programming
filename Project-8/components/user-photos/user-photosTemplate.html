@@ -1,0 +1,69 @@
+        <!-- View for regular specs
+
+        -->
+        <div ng-show="!main.showEC">
+            <div class="container" flex layout="column" layout-align="center center" id="cs142-user-photos-ImageSection">
+                <div class="container" flex layout="column">
+                <ul>
+                  <span ng-repeat="img in userImages">
+                    <img  class="cs142-user-photos-imgListItem"  ng-src="./images/{{img.file_name}}">
+                        <div  class="container" flex layout="column" layout-align="start stretch">
+                          <md-button ng-click="processComment(img)"> {{commentState[img._id]}} </md-button>
+                        <div ng-show="commentState[img._id] === 'submit'" layout="column" layout-align="start stretch" >
+                           <input ng-model=commentString[img._id]></input>
+                        </div>
+                        <md-card ng-repeat="(id, com) in img.comments" layout="row" layout-align="start center">
+                          <md-card-media layout=column>
+                            <img class="cs142-user-photos-thumbnail" ng-src="./images/{{profilePic(com.user._id)}}">
+                            <a  ng-href="#!users/{{com.user._id}}"  >{{getUserName(com.user._id)}}</a>
+                          </md-card-media>
+                          <md-card-content>
+                            <p>({{com.date_time}}):</p>
+                            <p>{{com.comment}}<p>
+                          </md-card-content>
+                        </md-card>
+                        </div>
+                  </span>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- View for extra-credit part
+          Specification are not exactly followed, instead of single photo page,
+          Notion of a Main photo and a thumbnail below with comments showing only that photo
+          has been composed.
+          It has all other features except the bookmarking a specific picture.
+          And instead of disabling prev-next button on extremes, it circles through
+        <div ng-show="main.showEC">
+            <div class="container" flex layout="column" layout-align="center center" id="cs142-user-photos-ImageSection">
+                <img class="cs142-user-photos-currentPicture" ng-src="./images/{{user.currentPic}}">
+                <div class="container" flex layout="row">
+                  <md-button ng-click="showPrevImage()" class="cs142-user-photos-prevButton"> prev </md-button>
+                  <md-button ng-click="showNextImage()" class="cs142-user-photos-nextButton"> next </md-button>
+                </div>
+                <div class="container" flex layout="row">
+                <ul>
+                  <span ng-repeat="img in userImages">
+                    <img  class="cs142-user-photos-imgListItem" ng-click="setCurrent(img._id)"   ng-src="./images/{{img.file_name}}">
+                  </span>
+                </ul>
+                </div>
+            </div>
+                <div  class="container" flex layout="column" layout-align="start stretch">
+                  <p> Comments: </p>
+                  <md-card ng-repeat="com in getCurrentComments()" layout="row" layout-align="start center">
+                    <md-card-media layout=column>
+                      <img class="cs142-user-photos-thumbnail" ng-src="./images/{{profilePic(com.user._id)}}">
+                      <a  ng-href="#!users/{{com.user._id}}"  >{{getUserName(com.user._id)}}</a>
+                    </md-card-media>
+                    <md-card-content>
+                      <p>({{com.date_time}}):</p>
+                      <p>{{com.comment}}<p>
+                    </md-card-content>
+                  </md-card>
+                </div>
+        </div>
+        -->
+

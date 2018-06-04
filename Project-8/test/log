@@ -1,0 +1,56 @@
+
+> project7test@1.0.0 test /Users/maverick/Projects/Web-Programming/Project-7/test
+> mocha serverApiTest.js sessionInputApiTest.js
+
+
+
+  CS142 Photo App API - 
+    login the user took
+      ✓ can login took with a post to /admin/login
+      ✓ can retrieve the Express session cookie
+    test /user/list
+      ✓ can get the list of user
+      ✓ is an array
+      ✓ has the correct number elements
+      ✓ has an entry for each of the users
+    test /user/:id
+      ✓ can get the list of user
+      ✓ can get each of the user detail with /user/:id
+      ✓ can return a 400 status on an invalid user id
+    test /photosOfUser/:id
+      ✓ can get the list of user
+      ✓ can get each of the user photos with /photosOfUser/:id (41ms)
+      ✓ can return a 400 status on an invalid id to photosOfUser
+
+  CS142 Photo App Session and Input API - 
+    test /admin/login and /admin/logout
+      ✓ errors getting the list of user if not logged in
+      ✓ errors getting user detail if not logged in
+      ✓ errors getting photosOfUser if not logged in
+      ✓ rejects logins to non-existent login_name
+      ✓ rejects logins to existing login_name with wrong password
+      ✓ accepts logins to existing login_name with correct password
+      ✓ can get user list when logged in
+      ✓ can logout when logged in
+    test /commentsOfPhoto/id
+TEST_DEBUG { _id: '5b11dc3bde52917d80d7033e',
+  message: 'User took logged in!',
+  loginValid: 1,
+  passwordValid: 1 }
+      ✓ can login as took and get id
+      ✓ can get tooks photos
+      ✓ can add a comment to the the first photo
+      ✓ can get tooks photos again
+      ✓ photo has one more comment
+      ✓ can logout when logged in
+    upload photos -  post /photos/new
+      ✓ can login as took and get id
+      ✓ can upload a photo (48ms)
+      ✓ can get the uploaded photo 
+    register user - post to /user
+      ✓ can create a new user
+      ✓ can reject a duplicate user
+
+
+  31 passing (326ms)
+
