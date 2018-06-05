@@ -1,3 +1,19 @@
+  <div class="mention-container">
+    <textarea ui-mention mention-example
+      ng-model="post.message"
+      placeholder="Use @mention to trigger"
+      ng-trim="false"
+      ></textarea>
+    <div class="mention-highlight"></div>
+
+    <ul ng-if="$mention.choices.length" class="dropdown">
+      <li ng-repeat="choice in $mention.choices" ng-class="{active:$mention.activeChoice==choice}">
+        <a ng-click="$mention.select(choice)">
+          {{::choice.first}} {{::choice.last}}
+        </a>
+      </li>
+    </ul>
+  </div>
         <!-- View for regular specs
 
         -->

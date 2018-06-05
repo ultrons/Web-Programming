@@ -1,0 +1,65 @@
+body {
+  font-size: 14px;
+  font-family: 'Helvetica'; }
+
+textarea[ui-mention], textarea[ui-mention] + * {
+  line-height: 1em;
+  font-size: 1rem;
+  padding: 5px;
+  border: 1px;
+  font-family: helvetica;
+  font-weight: normal; }
+
+textarea[ui-mention] {
+  min-height: 100px;
+  width: 100%;
+  display: block;
+  border: 1px solid;
+  z-index: 2;
+  position: relative; }
+  textarea[ui-mention][ui-mention] {
+    background: transparent; }
+
+a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer; }
+  a:hover {
+    color: green; }
+
+.mention-container {
+  position: relative; }
+
+.mention-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px;
+  padding: 2px;
+  z-index: 1;
+  color: transparent;
+  white-space: pre-wrap;
+  border: 1px solid transparent;
+  width: 100%; }
+  .mention-highlight span {
+    border-radius: 3px;
+    background: lightblue;
+    box-shadow: 0px 0px 0px 1px blue; }
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  min-width: 150px;
+  right: 0;
+  background: lightblue;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none; }
+  .dropdown .active {
+    background: lightgreen; }

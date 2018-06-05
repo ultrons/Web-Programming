@@ -1,7 +1,37 @@
 'use strict';
 
-cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resource', '$location', '$route', '$rootScope',
-  function($scope, $routeParams, $resource, $location, $route, $rootScope) {
+cs142App.directive('mentionExample', function () {
+  return {
+    require: 'uiMention',
+    link: function link($scope, $element, $attrs, uiMention) {
+      /**
+       * $mention.findChoices()
+       *
+       * @param  {regex.exec()} match    The trigger-text regex match object
+       * @todo Try to avoid using a regex match object
+       * @return {array[choice]|Promise} The list of possible choices
+       */
+      uiMention.findChoices = function (match, mentions) {
+        return choices
+        // Remove items that are already mentioned
+        .filter(function (choice) {
+          return !mentions.some(function (mention) {
+            return mention.id === choice.id;
+          });
+        })
+        // Matches items from search query
+        .filter(function (choice) {
+          return ~(choice.first + ' ' + choice.last).indexOf(match[1]);
+        });
+      };
+    }
+  };
+});
+
+var choices = [{ first: 'bob', last: 'barker', id: 11123 }, { first: 'kenny', last: 'logins', id: '123ab-123' }, { first: 'kyle', last: 'corn', id: '123' }, { first: 'steve', last: 'rodriguez', id: 'hi' }, { first: 'steve', last: 'holt', id: '0-9' }, { first: 'megan', last: 'burgerpants', id: 'ab-' }];
+
+
+cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resource', '$location', '$route', '$rootScope', function($scope, $routeParams, $resource, $location, $route, $rootScope ) {
     /*
      * Since the route is specified as '/photos/:userId' in $routeProvider config the
      * $routeParams  should have the userId property set with the path from the URL.
@@ -19,7 +49,7 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams', '$resourc
     if ($scope.user === undefined) {
         $scope.user = {};
     }
-
+    $scope.items = ["Noah", "Liam", "Mason", "Jacob"];
     var count = 0;
 
     $scope.profilePicAll = {};

@@ -22,10 +22,4 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', '$resourc
     Profile.get({id: userId}, function(profileData) {
         $scope.user.profilePic = profileData.file_name;
     });
-    $scope.resetAn = function () {
-        console.log("Resetting Annotation!");
-        anno.reset();
-    }
-
-    console.log("DEBUG...", anno);
   }]);
